@@ -40,7 +40,12 @@ const SignUp = () => {
             const result = await response.json();
             localStorage.setItem('user', JSON.stringify(result));
             console.log(result);
-            navigate('/login',{replace: true})
+            if(result.status === false){
+                console.log(result.msg)
+                alert('Already Exists! Try with some other details')
+            }else{
+                navigate('/login',{replace: true})
+            }
         } catch (error) {
             console.error(error);
         }

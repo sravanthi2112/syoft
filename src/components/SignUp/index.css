@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'roboto';
+  }
+  
+
+.signup_page{
+    background-color: lightpink;
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+.signup_page_body{
+    width: 80%;
+    border: lightpink 1px solid;
+    display: flex; 
+    justify-content: space-between;
+    font-family: 'Roboto';
+}
+
+.firstpartbg{
+    background-image: radial-gradient( rgb(245, 196, 204), rgb(198, 163, 238));
+    width: 45%;
+    padding: 20px;
+    color: black; 
+    border-radius: 30px;
+    border: pink solid 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.description{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.head{
+    font-size: 35px;
+}
+
+.secondpartbg{
+    border: 1px wheat solid;
+    width: 50%;
+    padding: 20px;
+    background-color: rgb(240, 229, 208);
+    border-radius: 30px;
+}
+
+.star{
+    color: red;
+}
+
+.inputfield{
+    width: 80%;
+    border: gray 1px solid;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 2%;
+}
+
+button{
+    width: 30%;
+    height: 40px;
+    border-radius: 50px;
+    background-color: skyblue;
+    margin-top: 10px;
+    border: skyblue;
+    font-size: 15px;
+    padding: 10px;
+    font-weight: 500;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .signup_page_body{
+        flex-direction: column;
+        width: 100%;
+    }
+    .signup_page{
+        height: 100%;
+        width: 100%;
+    }
+    .firstpartbg{
+        width: 100%;
+    }
+    .secondpartbg{
+        width: 100%;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,17 @@
+.user_dashboard{
+    background-image:linear-gradient(lightblue, lightpink,white) ;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid purple;
+}
+
+.user_details_body{
+    background-color: rgb(243, 230, 206);
+    width: 40%;
+    padding: 5%;
+    border-radius: 5%;
+    border: gray 2px solid;
+}

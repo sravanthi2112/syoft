@@ -5,6 +5,7 @@ import SignUp from './components/SignUp';
 import Login from './components/Login';
 import Dashboard from './components/DashBoard';
 
+
 function App() {
     return (
         <Router>

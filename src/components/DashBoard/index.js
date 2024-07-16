@@ -21,6 +21,7 @@ const Dashboard = () => {
                     <p>Phone: {details.user_phone}</p>
                     <p>City: {details.user_city}</p>
                     <p>Zipcode: {details.user_zipcode}</p>
+                    <button type='submit' onClick = {handleSignup}>Logout</button>
                 </div>
             </div>
         );

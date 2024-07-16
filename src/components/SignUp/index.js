@@ -10,8 +10,7 @@ const SignUp = () => {
         user_phone: '',
         user_password: '',
     });
-    const [usersList] = useState([])
-
+    
     const navigate = useNavigate()
 
     const handleChange = (e) => {
@@ -23,19 +22,10 @@ const SignUp = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(e.value)
-        const newUser = {
-            ...formData,
-            user_lastname: 'Doe',
-            user_city: 'Hyderabad',
-            user_zipcode: '500072'
-        };
-        const newList = usersList.push(newUser)
-        console.log(newList)
-        console.log("newList")
+        
         const data = {
             ...formData,
-            user_lastname: 'Doe',
+            user_lastname: 'kannapally',
             user_city: 'Hyderabad',
             user_zipcode: '500072'
         };
@@ -48,13 +38,13 @@ const SignUp = () => {
                 body: JSON.stringify(data)
             });
             const result = await response.json();
+            localStorage.setItem('user', JSON.stringify(result));
             console.log(result);
             navigate('/login',{replace: true})
         } catch (error) {
             console.error(error);
         }
     };
-
 
     return (
         <div className="signup_page">
@@ -78,7 +68,6 @@ const SignUp = () => {
                     <input type='checkbox' id="checkbox" />
                     <label htmlFor='checkbox' >I agree terms of service and Privacy Policy </label><br/>
                     <button type="submit">Sign Up</button>
-                    
                 </form>
                 </div>
             </div>
